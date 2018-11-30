@@ -3,60 +3,60 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/</loc>
+    <loc>/conference-notes/</loc>
   </url>
   
   <url>
-    <loc>/aws_reinvent_2018/codebuild_builder_session/</loc>
+    <loc>/conference-notes/aws_reinvent_2018/codebuild_builder_session/</loc>
   </url>
   
   <url>
-    <loc>/aws_reinvent_2018/codepipeline/</loc>
+    <loc>/conference-notes/aws_reinvent_2018/codepipeline/</loc>
   </url>
   
   <url>
-    <loc>/aws_reinvent_2018/coinbase_sre/</loc>
+    <loc>/conference-notes/aws_reinvent_2018/coinbase_sre/</loc>
   </url>
   
   <url>
-    <loc>/aws_reinvent_2018/comcast/</loc>
+    <loc>/conference-notes/aws_reinvent_2018/comcast/</loc>
   </url>
   
   <url>
-    <loc>/aws_reinvent_2018/multicloud_myth/</loc>
+    <loc>/conference-notes/aws_reinvent_2018/multicloud_myth/</loc>
   </url>
   
   <url>
-    <loc>/aws_reinvent_2018/releasing_mission_critical_software/</loc>
+    <loc>/conference-notes/aws_reinvent_2018/releasing_mission_critical_software/</loc>
   </url>
   
   <url>
-    <loc>/aws_reinvent_2018/serverless_patterns/</loc>
+    <loc>/conference-notes/aws_reinvent_2018/serverless_patterns/</loc>
   </url>
   
   <url>
-    <loc>/aws_reinvent_2018/</loc>
+    <loc>/conference-notes/aws_reinvent_2018/</loc>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>/conference-notes/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/aws_reinvent_2018/central_teams/</loc>
+    <loc>/conference-notes/aws_reinvent_2018/central_teams/</loc>
   </url>
   
   <url>
-    <loc>/aws_reinvent_2018/amazon_devops/</loc>
+    <loc>/conference-notes/aws_reinvent_2018/amazon_devops/</loc>
   </url>
   
   <url>
-    <loc>/aws_reinvent_2018/safe_serverless_deployments/</loc>
+    <loc>/conference-notes/aws_reinvent_2018/safe_serverless_deployments/</loc>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>/conference-notes/tags/</loc>
     <priority>0</priority>
   </url>
   

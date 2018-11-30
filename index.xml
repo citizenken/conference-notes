@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on My New Hugo Site</title>
-    <link>/</link>
+    <link>/conference-notes/</link>
     <description>Recent content in Home on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/conference-notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>/aws_reinvent_2018/codebuild_builder_session/</link>
+      <link>/conference-notes/aws_reinvent_2018/codebuild_builder_session/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/aws_reinvent_2018/codebuild_builder_session/</guid>
+      <guid>/conference-notes/aws_reinvent_2018/codebuild_builder_session/</guid>
       <description>Codebuild builder session * pay by minute * infinite scale * no queue times * docker based
 Jenkins plugin for codebuild to move the build step to AWS
 https://github.com/johnhanks1/jekyll_example</description>
@@ -23,10 +23,10 @@ https://github.com/johnhanks1/jekyll_example</description>
     
     <item>
       <title></title>
-      <link>/aws_reinvent_2018/codepipeline/</link>
+      <link>/conference-notes/aws_reinvent_2018/codepipeline/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/aws_reinvent_2018/codepipeline/</guid>
+      <guid>/conference-notes/aws_reinvent_2018/codepipeline/</guid>
       <description>pipeline talk
 cd best practices * VCS * automated builds * automated deployments * deploy to &amp;gt; 1 instances (HA, spread load) * unit tests * integration tests (selenium, functional, syntentic users) * deliver * operations dashboard
 Tools in the talk - AWS specific * monitoring - cloudwatch * sns - notifications * lambda * aws codedeploy/codepipeline for delivery * DEV309 - serverless + containers codedeploy/codepipeline
@@ -35,20 +35,20 @@ Add saftey to rolling deployments * check health * ensure minimum instances * ro
     
     <item>
       <title></title>
-      <link>/aws_reinvent_2018/coinbase_sre/</link>
+      <link>/conference-notes/aws_reinvent_2018/coinbase_sre/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/aws_reinvent_2018/coinbase_sre/</guid>
+      <guid>/conference-notes/aws_reinvent_2018/coinbase_sre/</guid>
       <description>Coinbase SRE talk * SRE and DevOps * actually work nicely together
 Key Insights 1. measure and improve human, organizational and machine systems * measure everything always 2. SRE is a move from reactive to proactive event mgmt * eliminate toil and eliminate them * toil = manual operational work that doesn&#39;t scale 3. Provide organizational back pressure mechanism * delay features to clean up tech debt * don&#39;t deploy new code until the app is more reliable * push back to teams/the org * feedback loop  How to convert ppl * set early expectations * have to get C-level buy in * takes time</description>
     </item>
     
     <item>
       <title></title>
-      <link>/aws_reinvent_2018/comcast/</link>
+      <link>/conference-notes/aws_reinvent_2018/comcast/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/aws_reinvent_2018/comcast/</guid>
+      <guid>/conference-notes/aws_reinvent_2018/comcast/</guid>
       <description>comcast serverless talk
 pluses * streamlined devops, codepipeline * supports a lot of languages * tag direct costs to projects
 considerations: * know what specialties are * certain languages not supported * need to deal with cold starts, concurrent read/writes, etc. * migration from non-aws requires focus and commitment
@@ -57,19 +57,19 @@ considerations: * know what specialties are * certain languages not supported * 
     
     <item>
       <title></title>
-      <link>/aws_reinvent_2018/multicloud_myth/</link>
+      <link>/conference-notes/aws_reinvent_2018/multicloud_myth/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/aws_reinvent_2018/multicloud_myth/</guid>
+      <guid>/conference-notes/aws_reinvent_2018/multicloud_myth/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>/aws_reinvent_2018/releasing_mission_critical_software/</link>
+      <link>/conference-notes/aws_reinvent_2018/releasing_mission_critical_software/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/aws_reinvent_2018/releasing_mission_critical_software/</guid>
+      <guid>/conference-notes/aws_reinvent_2018/releasing_mission_critical_software/</guid>
       <description>How Amazon releases Mission-critical Software  executes thousands of deploys at any give second 99.996% of deploys execute without problems always pushing to 100%
  much of what enables Amazon do do ^ is in our tooling
   Tech and cultural landscape at Amazon  two pizza teams 8 engineers is still the average size at Amazon  communication cost is expensive  end to end ownership Amazon is a &amp;ldquo;federation of startups&amp;rdquo;  given a domain, most decisions are the teams teams pick tech stack, ratio of roles, own service end to end  Amazon&amp;rsquo;s service oriented architecture  services have public contract only way other services talk to you allows for constant refactoring behind the contract  Local dev environment is the wild west  Agile-ish &amp;ldquo;The Process&amp;rdquo; the release/debug process/etc.</description>
@@ -77,10 +77,10 @@ considerations: * know what specialties are * certain languages not supported * 
     
     <item>
       <title></title>
-      <link>/aws_reinvent_2018/serverless_patterns/</link>
+      <link>/conference-notes/aws_reinvent_2018/serverless_patterns/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/aws_reinvent_2018/serverless_patterns/</guid>
+      <guid>/conference-notes/aws_reinvent_2018/serverless_patterns/</guid>
       <description>Severless patterns notes: * traits of serverless: 1. no server or container mgmt 2. flexible scaling (horizontal is taken care of) 3. HA, in all AZs 4. dont pay for idle
  lambda execution
  dl code state new container bootstrap the runtime (java/ruby/python, etc. environtment) run the code  steps 1-3 are &amp;ldquo;cold start&amp;rdquo; so there is a delay, but subsequent requests use the warmed containers
@@ -89,10 +89,10 @@ considerations: * know what specialties are * certain languages not supported * 
     
     <item>
       <title>DEV70: Role of Central Teams in DevOps Organizations</title>
-      <link>/aws_reinvent_2018/central_teams/</link>
+      <link>/conference-notes/aws_reinvent_2018/central_teams/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/aws_reinvent_2018/central_teams/</guid>
+      <guid>/conference-notes/aws_reinvent_2018/central_teams/</guid>
       <description>DEV70: Role of Central Teams in DevOps Organizations
  small companies have small Teams
  as it grows, central teams develop (ex. tools, platfomrm, infra)
@@ -104,20 +104,20 @@ considerations: * know what specialties are * certain languages not supported * 
     
     <item>
       <title>How Amazon Does Devops</title>
-      <link>/aws_reinvent_2018/amazon_devops/</link>
+      <link>/conference-notes/aws_reinvent_2018/amazon_devops/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/aws_reinvent_2018/amazon_devops/</guid>
+      <guid>/conference-notes/aws_reinvent_2018/amazon_devops/</guid>
       <description> 50 million deploys/year tools start to dictate behavior cultural philosphy  how often do we want to interact with our customers   timeline
  2001 amazon was a monolith monolith had a lot of interdependencies went back and isolated independent units  cart stock labeling  each unit gets 2 pizza teams after breaking up the units, agile was easier creating a multi-displinary team is NOT devops  each team member should have multiple skills, with fullstack ownership learn new things, compliment team  everything is code, so everything can be tested guardrails for self-service &amp;lt;&amp;ndash; key idea  opinionated templates helps bootstrap quickly without falling off the cliff   </description>
     </item>
     
     <item>
       <title>SRV343-R1: Best Practices for Safe Deployments on AWS Lambda and Amazon API Gateway</title>
-      <link>/aws_reinvent_2018/safe_serverless_deployments/</link>
+      <link>/conference-notes/aws_reinvent_2018/safe_serverless_deployments/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/aws_reinvent_2018/safe_serverless_deployments/</guid>
+      <guid>/conference-notes/aws_reinvent_2018/safe_serverless_deployments/</guid>
       <description>flexible schema much easier to deal with when using serverless  don&amp;rsquo;t need to deal with updates  lambda@the edge is like lamdba, but at the edge of your network, so it can do smarter routing to resources for ex.  for ex. feature flags to give beta version to a particular company  when you update a lambda, it creates an immutable version ID
  Aliases can be defined and linked to version IDs Allows for ex.</description>
     </item>
