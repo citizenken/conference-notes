@@ -1,4 +1,11 @@
-comcast serverless talk
+---
+title: Accelerate Innovation & Maximize Business Value with Serverless Apps [SRV212]
+tags:
+    - serverless
+    - session
+    - customer story
+---
+{{< youtube XUkhubMFVZI >}}
 
 pluses
 * streamlined devops, codepipeline

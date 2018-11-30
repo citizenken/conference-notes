@@ -1,11 +1,7 @@
 ---
-title: "SRV343-R1: Best Practices for Safe Deployments on AWS Lambda and Amazon API Gateway"
-toc: true
-menu:
-  sidebar:
-    name: Safe Deployments on AWS Lambda and Amazon API Gateway
-    parent: AWS Re:Invent 2018
+title: "Best Practices for Safe Deployments on AWS Lambda and Amazon API Gateway [SRV343]"
 ---
+
 * flexible schema much easier to deal with when using serverless
     * don't need to deal with updates
 * lambda@the edge is like lamdba, but at the edge of your network, so it can do smarter routing to resources for ex.

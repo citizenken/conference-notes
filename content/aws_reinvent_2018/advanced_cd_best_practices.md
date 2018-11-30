@@ -1,4 +1,12 @@
-pipeline talk
+---
+title: Advanced Continuous Delivery Best Practices [DEV317]
+tags:
+    - CD
+    - devops
+    - codepipeline
+    - session
+---
+{{< youtube Jnl29J3RJQ4 >}}
 
 cd best practices
 * VCS
@@ -8,8 +16,7 @@ cd best practices
 * unit tests
 * integration tests (selenium, functional, syntentic users)
 * deliver
-* operations dashboard
-
+* op
 Tools in the talk - AWS specific
 * monitoring - cloudwatch
 * sns - notifications

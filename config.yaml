@@ -1,10 +1,13 @@
 baseURL: "/conference-notes/"
 languageCode: "en-us"
-title: "My New Hugo Site"
-theme: "hyde"
+title: "Ken's Conference Notes"
+theme: "minimo"
 enableEmoji: true
 publishDir: "docs"
+
 params:
+  search:
+    client: fuse
   info:
     description: Minimalist theme for Hugo
     title404: Nothing's here!
@@ -20,3 +23,7 @@ params:
       - taxonomy_cloud
   settings:
     hideMainMenu: true
+
+taxonomies:
+    category: "categories"
+    tag: "tags"

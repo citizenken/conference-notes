@@ -1,18 +1,25 @@
-Coinbase SRE talk
-* SRE and DevOps
-    * actually work nicely together
+---
+title: "Building SRE from Scratch at Coinbase during Hypergrowth [DEV315]"
+tags:
+    - session
+    - devops
+    - culture
+    - SRE
+    - customer story
+---
+{{< youtube YDr1_-Tttz0 >}}
 
 ### Key Insights
-    1. measure and improve human, organizational and machine systems
-        * measure everything always
-    2. SRE is a move from reactive to proactive event mgmt
-        * eliminate toil and eliminate them
-            * toil = manual operational work that doesn't scale
-    3. Provide organizational back pressure mechanism
-        * delay features to clean up tech debt
-        * don't deploy new code until the app is more reliable
-        * push back to teams/the org
-        * feedback loop
+1. measure and improve human, organizational and machine systems
+    * measure everything always
+2. SRE is a move from reactive to proactive event mgmt
+    * eliminate toil and eliminate them
+        * toil = manual operational work that doesn't scale
+3. Provide organizational back pressure mechanism
+    * delay features to clean up tech debt
+    * don't deploy new code until the app is more reliable
+    * push back to teams/the org
+    * feedback loop
 
 How to convert ppl
 * set early expectations

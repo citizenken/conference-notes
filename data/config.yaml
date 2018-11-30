@@ -1,0 +1,4 @@
+taxonomy_cloud:
+  title: ""                            # default: Plural Name for `taxonomyCloud.taxonomy`
+  taxonomy: "tags"                     # default: "tags"
+  shuffle: false

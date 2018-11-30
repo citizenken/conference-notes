@@ -1,11 +1,11 @@
 ---
-title: How Amazon Does Devops
-toc: true
-menu:
-  sidebar:
-    name: How Amazon Does Devops
-    parent: AWS Re:Invent 2018
+title: Moving to DevOps the Amazon Way [DEV210]
+tags:
+    - culture
+    - devops
+    - session
 ---
+{{< youtube Pvb74TlV8SA >}}
 
 * 50 million deploys/year
 * tools start to dictate behavior

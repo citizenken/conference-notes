@@ -1,13 +1,11 @@
 ---
-title: "DEV70: Role of Central Teams in DevOps Organizations"
-toc: true
-menu:
-  sidebar:
-    name: Central Teams in DevOps Organizations
-    parent: AWS Re:Invent 2018
+title: "Role of Central Teams in DevOps Organizations [DEV70]"
+tags:
+    - session
+    - devops
+    - culture
 ---
-
-DEV70: Role of Central Teams in DevOps Organizations
+{{< youtube xA1qPQg3WTc >}}
 
 * small companies have small Teams
 
