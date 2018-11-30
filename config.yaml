@@ -1,7 +1,7 @@
-baseURL: "/conference-notes/"
+# baseURL: "/conference-notes/"
 languageCode: "en-us"
 title: "My New Hugo Site"
-theme: "minimo"
+theme: "hyde"
 enableEmoji: true
 publishDir: "docs"
 params:
