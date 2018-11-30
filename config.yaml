@@ -3,6 +3,7 @@ languageCode: "en-us"
 title: "My New Hugo Site"
 theme: "minimo"
 publishDir: "docs"
+relativeURLs: true
 params:
   info:
     description: Minimalist theme for Hugo
