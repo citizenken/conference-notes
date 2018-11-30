@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Coinbase SRE talk * SRE and DevOps * actually work nicely together
+Key Insights 1. measure and improve human, organizational and machine systems * measure everything always 2. SRE is a move from reactive to proactive event mgmt * eliminate toil and eliminate them * toil = manual operational work that doesn&#39;t scale 3. Provide organizational back pressure mechanism * delay features to clean up tech debt * don&#39;t deploy new code until the app is more reliable * push back to teams/the org * feedback loop  How to convert ppl * set early expectations * have to get C-level buy in * takes time'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content=' • My New Hugo Site'>
+<meta property='og:description' content='Coinbase SRE talk * SRE and DevOps * actually work nicely together
+Key Insights 1. measure and improve human, organizational and machine systems * measure everything always 2. SRE is a move from reactive to proactive event mgmt * eliminate toil and eliminate them * toil = manual operational work that doesn&#39;t scale 3. Provide organizational back pressure mechanism * delay features to clean up tech debt * don&#39;t deploy new code until the app is more reliable * push back to teams/the org * feedback loop  How to convert ppl * set early expectations * have to get C-level buy in * takes time'>
+<meta property='og:url' content='http://example.org/aws_reinvent_2018/coinbase_sre/'>
+<meta property='og:site_name' content='My New Hugo Site'>
+<meta property='og:type' content='article'><meta property='article:section' content='aws_reinvent_2018'><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.45.1" />
+
+  <title> • My New Hugo Site</title>
+  <link rel='canonical' href='http://example.org/aws_reinvent_2018/coinbase_sre/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.4a10984a.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+  
+
+</head>
+<body class='page type-aws_reinvent_2018 has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/logo.png'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+    My New Hugo Site
+    </h2>
+    <div class='desc'>
+    Minimalist theme for Hugo
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item has-children'>
+  <a href='/aws_reinvent_2018/'>AWS Re:Invent 2018</a><button class='sub-menu-toggler'>
+    <span class='screen-reader-text'>expand sub menu</span>
+    <span class='sign'></span>
+  </button>
+
+  <ul class='sub-menu'><li class='item'>
+  <a href='/aws_reinvent_2018/central_teams/'>Central Teams in DevOps Organizations</a></li><li class='item'>
+  <a href='/aws_reinvent_2018/amazon_devops/'>How Amazon Does Devops</a></li><li class='item'>
+  <a href='/aws_reinvent_2018/safe_serverless_deployments/'>Safe Deployments on AWS Lambda and Amazon API Gateway</a></li></ul></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Tags</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><span>Not a single Tag!</span></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/'>Home</a></li><li><a href='/aws_reinvent_2018/'>AWS Re:Invent 2018</a></li><li><span></span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>My New Hugo Site</p><p class='desc site-desc'>Minimalist theme for Hugo</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'></h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='0001-01-01T00:00:00Z'>0001, Jan 01</time>
+</span>
+
+  
+  
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<p>Coinbase SRE talk
+* SRE and DevOps
+    * actually work nicely together</p>
+
+<h3 id="key-insights">Key Insights</h3>
+
+<pre><code>1. measure and improve human, organizational and machine systems
+    * measure everything always
+2. SRE is a move from reactive to proactive event mgmt
+    * eliminate toil and eliminate them
+        * toil = manual operational work that doesn't scale
+3. Provide organizational back pressure mechanism
+    * delay features to clean up tech debt
+    * don't deploy new code until the app is more reliable
+    * push back to teams/the org
+    * feedback loop
+</code></pre>
+
+<p>How to convert ppl
+* set early expectations
+    * have to get C-level buy in
+    * takes time</p>
+
+<p>Coinbase
+* how do we improve reliability if we don&rsquo;t know where we&rsquo;re reliable today
+* installed service-level instrumentation
+* used &ldquo;Four Golden Signals&rdquo; to determine where to start that instrumentation initiative
+    * latency
+        * direct impact on customer experience
+        * where and how you measure it is important
+            * load balancer? server-side? client-side for round trip?
+    * traffic
+        * transactions per second
+        * direct relationship with business value
+        * most companies/services have a threshold above which we don&rsquo;t know what happens
+    * errors
+        * typically expressed as a ratio, errors/time
+            * helps set a nice target for improvement
+        * easily digestible
+        * another direct impact on customer experience
+        * goal is not to eliminate errors, but find an acceptable error rate
+    * saturation
+        * how close are you to total available
+        * how much DU and memory usage
+        * its an issue everywhere at all time</p>
+
+<ul>
+<li><p>Golden Signals can apply to human organizations, like teams</p>
+
+<ul>
+<li>burnout &lt;- saturation</li>
+<li>good SRE should be able to track this as well</li>
+<li>blockers &lt;- latency</li>
+<li>how many tickets in a sprint &lt;- traffic</li>
+<li>humans error &lt;- errors</li>
+</ul></li>
+
+<li><p>start somewhere, a best guess, and iterate from there</p>
+
+<ul>
+<li>a spreadsheet
+
+<ul>
+<li>column for services, then one for each golden signal, and what that service uses for that signal</li>
+</ul></li>
+<li>define &ldquo;done&rdquo;
+
+<ul>
+<li>ex. per-service dashboard in datadog for timeseries chart for each indicator</li>
+<li>document describing the different indicators and why they are important</li>
+</ul></li>
+<li>a spec document is important
+
+<ul>
+<li>helps guide implementation</li>
+<li>where do you want to instrument? client/load balancer/etc.</li>
+<li>why indicator matters</li>
+<li>what it tells you</li>
+<li>where you&rsquo;re going with it</li>
+<li>having this documentation embedded in the tool is critical so it stays up to date</li>
+</ul></li>
+<li>once we have some of these things defined, then we can define SLIs/promises
+
+<ul>
+<li>plain-language statements, easy to parse, easy to understand</li>
+<li>plenty of potential stateholders &lt;- bring them onboard at this point</li>
+<li>we do all this so we can keep promises, with customers, etc.</li>
+</ul></li>
+</ul></li>
+
+<li><p>more on promises</p>
+
+<ul>
+<li>Thinking in Promises by Mark Burgess</li>
+<li>promises have two parties</li>
+<li>promises can be human/machine, machine/machine, etc.
+
+<ul>
+<li>cross-functional team members can add more insight to different types of promises</li>
+</ul></li>
+<li>example promises
+
+<ul>
+<li>your service promises to respond to client within 50ms</li>
+<li>a service you depend on promises that its error rate will be &lt; 1%</li>
+<li>on-call promises they will engage an incident within 15 minutes</li>
+</ul></li>
+<li>When are promises done?
+
+<ul>
+<li>promises are done when they have a monitor alert</li>
+<li>forecasting - your tooling should be able to analyze and look historically to predict failures
+
+<ul>
+<li>ID stuff that runs the risk of breaking a promise and fix before it breaks promises</li>
+</ul></li>
+</ul></li>
+<li>when promises are broken&hellip;
+
+<ul>
+<li>its inevitable, so plan for that inevitability</li>
+<li>it builds trust</li>
+</ul></li>
+</ul></li>
+
+<li><p>blame-less post-mortems</p>
+
+<ul>
+<li>let the data do the talking</li>
+<li>requires 3 things
+
+<ol>
+<li>good instrumentation</li>
+<li>good understanding of what you&rsquo;re measuring</li>
+<li>process for interpreting</li>
+</ol></li>
+</ul></li>
+
+<li><p>interpreting incidents</p>
+
+<ul>
+<li>build a shared language</li>
+<li>practice communication</li>
+<li>understand that incidents and outages are broken promises</li>
+<li>creates domain-specific language with no ambiguity, quickly</li>
+</ul></li>
+
+<li><p>measure incident response</p>
+
+<ul>
+<li>quantify and measure the quality of ryour incident responses</li>
+<li>quantitative: time to detect, time to engage, time to fix</li>
+<li>qualitative: quality of communication
+
+<ul>
+<li>it is clear who to talk to</li>
+<li>do we have all the stakeholders documented</li>
+</ul></li>
+</ul></li>
+
+<li><p>RECAP</p>
+
+<ul>
+<li>why SRE?
+
+<ul>
+<li>why gets your buy in</li>
+</ul></li>
+<li>get instrumentation started
+
+<ul>
+<li>spreadsheet, documents</li>
+</ul></li>
+<li>promise enumeration
+
+<ul>
+<li>document clearly what our promises is</li>
+</ul></li>
+<li>measure response when promises are broken</li>
+<li>gains
+
+<ul>
+<li>transparancy
+*</li>
+</ul></li>
+</ul></li>
+</ul>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/aws_reinvent_2018/comcast/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span></a>
+    </div><div class='next-entry sep-before'>
+      <a href='/aws_reinvent_2018/codepipeline/'>
+        <span class='screen-reader-text'>Next post: </span><span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><div class='copyright'>
+  <p></p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__public_path__='\/assets\/js\/'</script>
+
+<script src='/assets/js/main.fae8ed32.js'></script>
+
+</body>
+
+</html>
+

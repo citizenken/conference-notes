@@ -1,0 +1,21 @@
+baseURL: "http://example.org/"
+languageCode: "en-us"
+title: "My New Hugo Site"
+theme: "minimo"
+publishDir: "docs"
+params:
+  info:
+    description: Minimalist theme for Hugo
+    title404: Nothing's here!
+  sidebar:
+    enable: true
+  widgets:
+    header:
+      - breadcrumbs
+    sidebar:
+      - about
+      - search
+      - sidebar_menu
+      - taxonomy_cloud
+  settings:
+    hideMainMenu: true

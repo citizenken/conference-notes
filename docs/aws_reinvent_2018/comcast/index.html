@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='comcast serverless talk
+pluses * streamlined devops, codepipeline * supports a lot of languages * tag direct costs to projects
+considerations: * know what specialties are * certain languages not supported * need to deal with cold starts, concurrent read/writes, etc. * migration from non-aws requires focus and commitment
+ kinesis firehose to watch for inbound connections faster than humans could do, and then try to shut down (ex. using &ldquo;i am not a robot&rdquo;)'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content=' • My New Hugo Site'>
+<meta property='og:description' content='comcast serverless talk
+pluses * streamlined devops, codepipeline * supports a lot of languages * tag direct costs to projects
+considerations: * know what specialties are * certain languages not supported * need to deal with cold starts, concurrent read/writes, etc. * migration from non-aws requires focus and commitment
+ kinesis firehose to watch for inbound connections faster than humans could do, and then try to shut down (ex. using &ldquo;i am not a robot&rdquo;)'>
+<meta property='og:url' content='http://example.org/aws_reinvent_2018/comcast/'>
+<meta property='og:site_name' content='My New Hugo Site'>
+<meta property='og:type' content='article'><meta property='article:section' content='aws_reinvent_2018'><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.45.1" />
+
+  <title> • My New Hugo Site</title>
+  <link rel='canonical' href='http://example.org/aws_reinvent_2018/comcast/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.4a10984a.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+  
+
+</head>
+<body class='page type-aws_reinvent_2018 has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/logo.png'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+    My New Hugo Site
+    </h2>
+    <div class='desc'>
+    Minimalist theme for Hugo
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item has-children'>
+  <a href='/aws_reinvent_2018/'>AWS Re:Invent 2018</a><button class='sub-menu-toggler'>
+    <span class='screen-reader-text'>expand sub menu</span>
+    <span class='sign'></span>
+  </button>
+
+  <ul class='sub-menu'><li class='item'>
+  <a href='/aws_reinvent_2018/central_teams/'>Central Teams in DevOps Organizations</a></li><li class='item'>
+  <a href='/aws_reinvent_2018/amazon_devops/'>How Amazon Does Devops</a></li><li class='item'>
+  <a href='/aws_reinvent_2018/safe_serverless_deployments/'>Safe Deployments on AWS Lambda and Amazon API Gateway</a></li></ul></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Tags</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><span>Not a single Tag!</span></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/'>Home</a></li><li><a href='/aws_reinvent_2018/'>AWS Re:Invent 2018</a></li><li><span></span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>My New Hugo Site</p><p class='desc site-desc'>Minimalist theme for Hugo</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'></h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='0001-01-01T00:00:00Z'>0001, Jan 01</time>
+</span>
+
+  
+  
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  <p>comcast serverless talk</p>
+
+<p>pluses
+* streamlined devops, codepipeline
+* supports a lot of languages
+* tag direct costs to projects</p>
+
+<p>considerations:
+* know what specialties are
+* certain languages not supported
+* need to deal with cold starts, concurrent read/writes, etc.
+* migration from non-aws requires focus and commitment</p>
+
+<ul>
+<li><p>kinesis firehose to watch for inbound connections faster than humans could do, and then try to shut down (ex. using &ldquo;i am not a robot&rdquo;)</p>
+
+<ul>
+<li>the serverless firehose can take that logging stream, analyze, and store it</li>
+<li>example used was bots trying to auth</li>
+<li>another example was comcast logins from a partner that had a retry bug (like hbo login using comcast)
+
+<ul>
+<li>blowing up traffic w/requests, serverless prevented other services from having performance hits</li>
+</ul></li>
+</ul></li>
+
+<li><p>comcast primetime tv has huge scale issues (like firing off recordings, people turning it on, etc.)</p></li>
+
+<li><p>comcast netflix had huge requirements for logins/auth, so they had to make a VPC that could handle those requests,
+as well as could talk to the on prem systems</p></li>
+</ul>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/aws_reinvent_2018/multicloud_myth/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span></a>
+    </div><div class='next-entry sep-before'>
+      <a href='/aws_reinvent_2018/coinbase_sre/'>
+        <span class='screen-reader-text'>Next post: </span><span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><div class='copyright'>
+  <p></p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__public_path__='\/assets\/js\/'</script>
+
+<script src='/assets/js/main.fae8ed32.js'></script>
+
+</body>
+
+</html>
+

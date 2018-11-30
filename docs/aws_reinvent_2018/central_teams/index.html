@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='DEV70: Role of Central Teams in DevOps Organizations
+ small companies have small Teams
+ as it grows, central teams develop (ex. tools, platfomrm, infra)
+ becomes a &ldquo;fractal&rdquo; of central teams
+ different BUs have central teams that talk to a central time  moving from traditional dev/ops/qa model to full end-end ownership
+ with DevOps teams, why do we need central teams?
+ most devops teams, while their work is different, they have the same software development lifecycle'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='DEV70: Role of Central Teams in DevOps Organizations • My New Hugo Site'>
+<meta property='og:description' content='DEV70: Role of Central Teams in DevOps Organizations
+ small companies have small Teams
+ as it grows, central teams develop (ex. tools, platfomrm, infra)
+ becomes a &ldquo;fractal&rdquo; of central teams
+ different BUs have central teams that talk to a central time  moving from traditional dev/ops/qa model to full end-end ownership
+ with DevOps teams, why do we need central teams?
+ most devops teams, while their work is different, they have the same software development lifecycle'>
+<meta property='og:url' content='http://example.org/aws_reinvent_2018/central_teams/'>
+<meta property='og:site_name' content='My New Hugo Site'>
+<meta property='og:type' content='article'><meta property='article:section' content='aws_reinvent_2018'><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.45.1" />
+
+  <title>DEV70: Role of Central Teams in DevOps Organizations • My New Hugo Site</title>
+  <link rel='canonical' href='http://example.org/aws_reinvent_2018/central_teams/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.4a10984a.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+  
+
+</head>
+<body class='page type-aws_reinvent_2018 has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/logo.png'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+    My New Hugo Site
+    </h2>
+    <div class='desc'>
+    Minimalist theme for Hugo
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item has-children has-current'>
+  <a href='/aws_reinvent_2018/'>AWS Re:Invent 2018</a><button class='sub-menu-toggler'>
+    <span class='screen-reader-text'>expand sub menu</span>
+    <span class='sign'></span>
+  </button>
+
+  <ul class='sub-menu'><li class='item current'>
+  <a aria-current='page' href='/aws_reinvent_2018/central_teams/'>Central Teams in DevOps Organizations</a></li><li class='item'>
+  <a href='/aws_reinvent_2018/amazon_devops/'>How Amazon Does Devops</a></li><li class='item'>
+  <a href='/aws_reinvent_2018/safe_serverless_deployments/'>Safe Deployments on AWS Lambda and Amazon API Gateway</a></li></ul></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Tags</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><span>Not a single Tag!</span></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/'>Home</a></li><li><a href='/aws_reinvent_2018/'>AWS Re:Invent 2018</a></li><li><span>DEV70: Role of Central Teams in DevOps Organizations</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>My New Hugo Site</p><p class='desc site-desc'>Minimalist theme for Hugo</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>DEV70: Role of Central Teams in DevOps Organizations</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='0001-01-01T00:00:00Z'>0001, Jan 01</time>
+</span>
+
+  
+  
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+<details class='container entry-toc'>
+  <summary class='title'>
+    <span>Table of Contents</span>
+  </summary>
+  
+</details>
+
+
+  <div class='container entry-content'>
+  <p>DEV70: Role of Central Teams in DevOps Organizations</p>
+
+<ul>
+<li><p>small companies have small Teams</p></li>
+
+<li><p>as it grows, central teams develop (ex. tools, platfomrm, infra)</p></li>
+
+<li><p>becomes a &ldquo;fractal&rdquo; of central teams</p>
+
+<ul>
+<li>different BUs have central teams that talk to a central time</li>
+</ul></li>
+
+<li><p>moving from traditional dev/ops/qa model to full end-end ownership</p></li>
+
+<li><p>with DevOps teams, why do we need central teams?</p></li>
+
+<li><p>most devops teams, while their work is different, they have the same software development lifecycle</p></li>
+
+<li><p>how many different implementations of monitoring/building tooling/etc. across a company?</p>
+
+<ul>
+<li>His opinion: as few as possible</li>
+</ul></li>
+
+<li><p>Central teams create these common workflows and processes and abstract a lot of the process stuff away from devs</p></li>
+
+<li><p>no central team mandate at Netflix</p>
+
+<ul>
+<li>no one has to use their tooling</li>
+<li>challenge, but also a value, because they are providing the best-of-breed solution
+
+<ul>
+<li>rate of adoption becomes important metric</li>
+<li>is our stuff being used? if not, lets find out whats going wrong</li>
+</ul></li>
+</ul></li>
+
+<li><p>what are you optimizing?</p>
+
+<ul>
+<li>availability, velocity, efficiency</li>
+<li>need to align with the other teams on these factors</li>
+<li>ex. startups velocity is more important vs. bigger companies who care about availability</li>
+</ul></li>
+
+<li><p>leader or fast follower? central teams need to determine that</p>
+
+<ul>
+<li>dangers of getting too far ahead or too far behind</li>
+<li>to far ahead of teams? can lead to churn amongst internal customer, too many different solutions too fast</li>
+<li>to far behind? customers will make their own solutions/shadow IT</li>
+</ul></li>
+
+<li><p>happy medium between leading/follower of treads amongst teams</p>
+
+<ul>
+<li>work with pioneering teams to understand what their solution is early, evaluate scalability</li>
+<li>once there is an inflection point, that other teams want to use the solution, that can be a good time to move to a central team</li>
+</ul></li>
+
+<li><p>Build or buy?</p>
+
+<ul>
+<li>when do you build a bespoke solution instead of leveraging an existing one? This is their decision model:
+
+<ol>
+<li>look at AWS, see if there is something</li>
+<li>look at other 3rd parties</li>
+<li>look at opensource. Even if it only statisfies like, 80% of use cases, might still be interesting, because you can contribute upstream</li>
+<li>roll it your own if there is really no other solution</li>
+</ol></li>
+</ul></li>
+</ul>
+
+<p>two opensource stories:
+1. spinnaker - popular, good community support, Google/AWS contribution
+2. OSS - failed, didn&rsquo;t take off</p>
+
+<ul>
+<li>central team invests in educaion
+
+<ul>
+<li>onboarding so best practices and patterns are in from the start</li>
+<li>continuous education to bring existing ppl onboard</li>
+</ul></li>
+<li>good discoverabily for tooling resources
+
+<ul>
+<li>if there isn&rsquo;t strong discoverabily, ppl won&rsquo;t use your solution</li>
+</ul></li>
+
+<li><p>how to continuously update your customers on what&rsquo;s new and improved?</p>
+
+<ul>
+<li>figure out what kind of avenue is effective?
+
+<ul>
+<li>brown bag lunches</li>
+<li>newsletters</li>
+<li>road shows</li>
+<li>onboarding sessions/continuous sessions</li>
+</ul></li>
+<li>takes all types of communitation all the time</li>
+</ul></li>
+
+<li><p>generalized vs. specialized needs</p>
+
+<ul>
+<li>too generalized leads to least-common-denominator</li>
+<li>too specific and it can&rsquo;t be shared well</li>
+<li>solution? try to find a happy medium, then
+
+<ul>
+<li>make their internal tooling to be extensible</li>
+<li>inner opensource</li>
+</ul></li>
+</ul></li>
+
+<li><p>for a long time, they had no dedicated product management</p>
+
+<ul>
+<li>start out as team doing customer feedback, requirement gathering, prioritizing</li>
+<li>at some point, there is a scale/complexity that PMs are needed
+
+<ul>
+<li>now they are trying to create a PM roll</li>
+<li>not only does what they did before, but can take on more and be more focused</li>
+</ul></li>
+</ul></li>
+
+<li><p>finding the right engagement model</p>
+
+<ul>
+<li>working directly with teams creates a customer -&gt; provider relationship</li>
+<li>working with distributed central teams makes them more partners than customers
+
+<ul>
+<li>they have a closer understanding to what their teams need, can help manage the general/specialized issue</li>
+</ul></li>
+</ul></li>
+
+<li><p>driving change</p>
+
+<ul>
+<li>finding the key updates/migrations and prioritizing/pushing that</li>
+<li>adoption curve
+
+<ul>
+<li>early, fast, no problem</li>
+<li>medium once it is more mature</li>
+<li>not done until that tail is done
+
+<ul>
+<li>current just works</li>
+<li>has to decide what is good for a couple lagging teams vs. the company</li>
+</ul></li>
+</ul></li>
+</ul></li>
+
+<li><p>align central teams</p>
+
+<ul>
+<li>many central teams
+
+<ul>
+<li>security, systems, data, etc.</li>
+</ul></li>
+<li>have to align central teams before approaching customers prevents tons of &ldquo;tiny&rdquo; requests slowing things done</li>
+</ul></li>
+
+<li><p>&ldquo;Highly aligned, loosely coupled&rdquo;</p></li>
+
+<li><p>Fragmentation:</p>
+
+<ul>
+<li>teams developing a solution that already exists causes fragmentation
+
+<ul>
+<li>accidental:
+
+<ul>
+<li>issue with developer awareness/outreach/discoverability</li>
+</ul></li>
+<li>deliberate:
+
+<ul>
+<li>harder to address</li>
+<li>team know a solution exists, but rejects it</li>
+<li>important signal to determine shortcoming</li>
+<li>could be an awareness issue</li>
+<li>could be a real gap</li>
+</ul></li>
+</ul></li>
+</ul></li>
+
+<li><p>celebrate adoption</p>
+
+<ul>
+<li>adoption is a key metric</li>
+<li>when the metric is met/good, need to recognize that</li>
+</ul></li>
+
+<li><p>soft metrics are valuable</p>
+
+<ul>
+<li>hard metrics can sometimes prevent you from seeing the forest through the trees</li>
+<li>ex. customer happiness</li>
+</ul></li>
+</ul>
+
+<p>QA
+* guardrails and how that works with central teams
+    * different concept than gatekeeprs
+    * surface potential issues as suggestions and &ldquo;are you sure you want to do that&rdquo;
+        * ex. spinniker from making large changes during busiest times. Are you sure?</p>
+
+<ul>
+<li><p>how do you keep teams&rsquo; trust and not becoming ticket hubs?</p>
+
+<ul>
+<li>constant engagement, documentation</li>
+<li>ask for feedback, get an idea of what teams need, and then circle back when you address that need</li>
+</ul></li>
+
+<li><p>authority that enforces mandate for ?</p>
+
+<ul>
+<li>sometimes, specifically in the security domain, the central teams force something</li>
+<li>responsiblity that developers make good, sound decisions?
+
+<ul>
+<li>not using something thats java cause youre a ruby guy is not a good solution</li>
+</ul></li>
+</ul></li>
+
+<li><p>how do you resolve conflict?</p>
+
+<ul>
+<li>tough, but still works on escalating to managers</li>
+</ul></li>
+
+<li><p>in early stage of devops transformation, when do you allow teams to have more freedom?</p>
+
+<ul>
+<li>if the teams can handle the responsibility and trust of owning their own stuff, then they can make their own decisions apart from the central team</li>
+</ul></li>
+
+<li><p>what is the feedback mechanism</p>
+
+<ul>
+<li>feedback isn&rsquo;t going to be coming in voluntarily</li>
+<li>frequently reach out to teams to get feedback
+
+<ul>
+<li>surveys have gotten good responses in the last few years</li>
+</ul></li>
+</ul></li>
+
+<li><p>size of central teams as it relates to the size of the engineering teams</p>
+
+<ul>
+<li>try to think of it as leverage, leverage being the ratio of value of the product vs. cost of the product
+
+<ul>
+<li>if they grow at the same rate, then they maintain leverage, but not providing more value</li>
+<li>if they grow faster, then they lose leverage, harder to justify their grown because the ROI is impacted</li>
+<li>best is slightly under the same rate, because they&rsquo;ll provide more value with fewer resources</li>
+</ul></li>
+</ul></li>
+
+<li><p>no goverance, no chargebacks</p>
+
+<ul>
+<li>only have one product</li>
+</ul></li>
+
+<li><p>one trick for newsletters</p>
+
+<ul>
+<li>distill updates as small as possible
+
+<ul>
+<li>the most impactful, relevant changes</li>
+</ul></li>
+<li>3-page newletters with every change gets thrown out</li>
+</ul></li>
+
+<li><p>do you embbed central team members in other teams?</p>
+
+<ul>
+<li>central team members go work in app teams for <sup>6</sup>&frasl;<sub>9</sub> months, get real customer hands-on experience</li>
+<li>at the same time, they bring the central team knowledge to the app team, closing gaps and awareness</li>
+<li>forms stronger bonds, which helps with conflict resolution</li>
+</ul></li>
+
+<li><p>when to decide to scale the central team?</p>
+
+<ul>
+<li>combination of the signal/happiness of customers</li>
+<li>analyzing portfolio, and figure out what gaps</li>
+<li>try to run lean, not making stuff that doesn&rsquo;t have a need</li>
+<li>up to each team manager w/that decision</li>
+</ul></li>
+
+<li><p>w/lack of adoption, does the central team throw out their solution and supports the one that takes off?</p>
+
+<ul>
+<li>no prescribed answer</li>
+<li>centralize the product</li>
+<li>work with the teams to decide if they want it centralized or not</li>
+</ul></li>
+
+<li><p>how to handle central team priorities? how do you balance the need between new tech and what customers want?</p>
+
+<ul>
+<li>its a balance</li>
+<li>try to be situationally aware and understand the landscape</li>
+<li>understand the primary business needs</li>
+<li>understand the tech trends</li>
+<li>understand immediate customer needs</li>
+<li>really good product managers come in here to make the hard choices
+
+<ul>
+<li>being deliberate and communicating it to the rest of the company</li>
+</ul></li>
+</ul></li>
+
+<li><p>centralized security team</p>
+
+<ul>
+<li>have to work closely, because they often use the platform team to push out security changes</li>
+</ul></li>
+</ul>
+
+<p>Ruslan Meshenberg
+@rusmeshenberg</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/aws_reinvent_2018/amazon_devops/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>How Amazon Does Devops</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/aws_reinvent_2018/serverless_patterns/'>
+        <span class='screen-reader-text'>Next post: </span><span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><div class='copyright'>
+  <p></p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__public_path__='\/assets\/js\/'</script>
+
+<script src='/assets/js/main.fae8ed32.js'></script>
+
+</body>
+
+</html>
+
