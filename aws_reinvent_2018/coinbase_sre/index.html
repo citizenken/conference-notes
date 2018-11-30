@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="//gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.45.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> &middot; My New Hugo Site</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="css/poole.css">
+  <link type="text/css" rel="stylesheet" href="css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="My New Hugo Site" />
+
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href=""><h1>My New Hugo Site</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2018. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1></h1>
+  <time datetime=0001-01-01T00:00:00Z class="post-date">Mon, Jan 1, 0001</time>
+  
+
+<p>Coinbase SRE talk
+* SRE and DevOps
+    * actually work nicely together</p>
+
+<h3 id="key-insights">Key Insights</h3>
+
+<pre><code>1. measure and improve human, organizational and machine systems
+    * measure everything always
+2. SRE is a move from reactive to proactive event mgmt
+    * eliminate toil and eliminate them
+        * toil = manual operational work that doesn't scale
+3. Provide organizational back pressure mechanism
+    * delay features to clean up tech debt
+    * don't deploy new code until the app is more reliable
+    * push back to teams/the org
+    * feedback loop
+</code></pre>
+
+<p>How to convert ppl
+* set early expectations
+    * have to get C-level buy in
+    * takes time</p>
+
+<p>Coinbase
+* how do we improve reliability if we don&rsquo;t know where we&rsquo;re reliable today
+* installed service-level instrumentation
+* used &ldquo;Four Golden Signals&rdquo; to determine where to start that instrumentation initiative
+    * latency
+        * direct impact on customer experience
+        * where and how you measure it is important
+            * load balancer? server-side? client-side for round trip?
+    * traffic
+        * transactions per second
+        * direct relationship with business value
+        * most companies/services have a threshold above which we don&rsquo;t know what happens
+    * errors
+        * typically expressed as a ratio, errors/time
+            * helps set a nice target for improvement
+        * easily digestible
+        * another direct impact on customer experience
+        * goal is not to eliminate errors, but find an acceptable error rate
+    * saturation
+        * how close are you to total available
+        * how much DU and memory usage
+        * its an issue everywhere at all time</p>
+
+<ul>
+<li><p>Golden Signals can apply to human organizations, like teams</p>
+
+<ul>
+<li>burnout &lt;- saturation</li>
+<li>good SRE should be able to track this as well</li>
+<li>blockers &lt;- latency</li>
+<li>how many tickets in a sprint &lt;- traffic</li>
+<li>humans error &lt;- errors</li>
+</ul></li>
+
+<li><p>start somewhere, a best guess, and iterate from there</p>
+
+<ul>
+<li>a spreadsheet
+
+<ul>
+<li>column for services, then one for each golden signal, and what that service uses for that signal</li>
+</ul></li>
+<li>define &ldquo;done&rdquo;
+
+<ul>
+<li>ex. per-service dashboard in datadog for timeseries chart for each indicator</li>
+<li>document describing the different indicators and why they are important</li>
+</ul></li>
+<li>a spec document is important
+
+<ul>
+<li>helps guide implementation</li>
+<li>where do you want to instrument? client/load balancer/etc.</li>
+<li>why indicator matters</li>
+<li>what it tells you</li>
+<li>where you&rsquo;re going with it</li>
+<li>having this documentation embedded in the tool is critical so it stays up to date</li>
+</ul></li>
+<li>once we have some of these things defined, then we can define SLIs/promises
+
+<ul>
+<li>plain-language statements, easy to parse, easy to understand</li>
+<li>plenty of potential stateholders &lt;- bring them onboard at this point</li>
+<li>we do all this so we can keep promises, with customers, etc.</li>
+</ul></li>
+</ul></li>
+
+<li><p>more on promises</p>
+
+<ul>
+<li>Thinking in Promises by Mark Burgess</li>
+<li>promises have two parties</li>
+<li>promises can be human/machine, machine/machine, etc.
+
+<ul>
+<li>cross-functional team members can add more insight to different types of promises</li>
+</ul></li>
+<li>example promises
+
+<ul>
+<li>your service promises to respond to client within 50ms</li>
+<li>a service you depend on promises that its error rate will be &lt; 1%</li>
+<li>on-call promises they will engage an incident within 15 minutes</li>
+</ul></li>
+<li>When are promises done?
+
+<ul>
+<li>promises are done when they have a monitor alert</li>
+<li>forecasting - your tooling should be able to analyze and look historically to predict failures
+
+<ul>
+<li>ID stuff that runs the risk of breaking a promise and fix before it breaks promises</li>
+</ul></li>
+</ul></li>
+<li>when promises are broken&hellip;
+
+<ul>
+<li>its inevitable, so plan for that inevitability</li>
+<li>it builds trust</li>
+</ul></li>
+</ul></li>
+
+<li><p>blame-less post-mortems</p>
+
+<ul>
+<li>let the data do the talking</li>
+<li>requires 3 things
+
+<ol>
+<li>good instrumentation</li>
+<li>good understanding of what you&rsquo;re measuring</li>
+<li>process for interpreting</li>
+</ol></li>
+</ul></li>
+
+<li><p>interpreting incidents</p>
+
+<ul>
+<li>build a shared language</li>
+<li>practice communication</li>
+<li>understand that incidents and outages are broken promises</li>
+<li>creates domain-specific language with no ambiguity, quickly</li>
+</ul></li>
+
+<li><p>measure incident response</p>
+
+<ul>
+<li>quantify and measure the quality of ryour incident responses</li>
+<li>quantitative: time to detect, time to engage, time to fix</li>
+<li>qualitative: quality of communication
+
+<ul>
+<li>it is clear who to talk to</li>
+<li>do we have all the stakeholders documented</li>
+</ul></li>
+</ul></li>
+
+<li><p>RECAP</p>
+
+<ul>
+<li>why SRE?
+
+<ul>
+<li>why gets your buy in</li>
+</ul></li>
+<li>get instrumentation started
+
+<ul>
+<li>spreadsheet, documents</li>
+</ul></li>
+<li>promise enumeration
+
+<ul>
+<li>document clearly what our promises is</li>
+</ul></li>
+<li>measure response when promises are broken</li>
+<li>gains
+
+<ul>
+<li>transparancy
+*</li>
+</ul></li>
+</ul></li>
+</ul>
+
+</div>
+
+
+    </main>
+
+    
+  </body>
+</html>

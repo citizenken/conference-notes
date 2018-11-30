@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="//gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.45.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DEV70: Role of Central Teams in DevOps Organizations &middot; My New Hugo Site</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="css/poole.css">
+  <link type="text/css" rel="stylesheet" href="css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="My New Hugo Site" />
+
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href=""><h1>My New Hugo Site</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2018. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>DEV70: Role of Central Teams in DevOps Organizations</h1>
+  <time datetime=0001-01-01T00:00:00Z class="post-date">Mon, Jan 1, 0001</time>
+  <p>DEV70: Role of Central Teams in DevOps Organizations</p>
+
+<ul>
+<li><p>small companies have small Teams</p></li>
+
+<li><p>as it grows, central teams develop (ex. tools, platfomrm, infra)</p></li>
+
+<li><p>becomes a &ldquo;fractal&rdquo; of central teams</p>
+
+<ul>
+<li>different BUs have central teams that talk to a central time</li>
+</ul></li>
+
+<li><p>moving from traditional dev/ops/qa model to full end-end ownership</p></li>
+
+<li><p>with DevOps teams, why do we need central teams?</p></li>
+
+<li><p>most devops teams, while their work is different, they have the same software development lifecycle</p></li>
+
+<li><p>how many different implementations of monitoring/building tooling/etc. across a company?</p>
+
+<ul>
+<li>His opinion: as few as possible</li>
+</ul></li>
+
+<li><p>Central teams create these common workflows and processes and abstract a lot of the process stuff away from devs</p></li>
+
+<li><p>no central team mandate at Netflix</p>
+
+<ul>
+<li>no one has to use their tooling</li>
+<li>challenge, but also a value, because they are providing the best-of-breed solution
+
+<ul>
+<li>rate of adoption becomes important metric</li>
+<li>is our stuff being used? if not, lets find out whats going wrong</li>
+</ul></li>
+</ul></li>
+
+<li><p>what are you optimizing?</p>
+
+<ul>
+<li>availability, velocity, efficiency</li>
+<li>need to align with the other teams on these factors</li>
+<li>ex. startups velocity is more important vs. bigger companies who care about availability</li>
+</ul></li>
+
+<li><p>leader or fast follower? central teams need to determine that</p>
+
+<ul>
+<li>dangers of getting too far ahead or too far behind</li>
+<li>to far ahead of teams? can lead to churn amongst internal customer, too many different solutions too fast</li>
+<li>to far behind? customers will make their own solutions/shadow IT</li>
+</ul></li>
+
+<li><p>happy medium between leading/follower of treads amongst teams</p>
+
+<ul>
+<li>work with pioneering teams to understand what their solution is early, evaluate scalability</li>
+<li>once there is an inflection point, that other teams want to use the solution, that can be a good time to move to a central team</li>
+</ul></li>
+
+<li><p>Build or buy?</p>
+
+<ul>
+<li>when do you build a bespoke solution instead of leveraging an existing one? This is their decision model:
+
+<ol>
+<li>look at AWS, see if there is something</li>
+<li>look at other 3rd parties</li>
+<li>look at opensource. Even if it only statisfies like, 80% of use cases, might still be interesting, because you can contribute upstream</li>
+<li>roll it your own if there is really no other solution</li>
+</ol></li>
+</ul></li>
+</ul>
+
+<p>two opensource stories:
+1. spinnaker - popular, good community support, Google/AWS contribution
+2. OSS - failed, didn&rsquo;t take off</p>
+
+<ul>
+<li><p>central team invests in educaion</p>
+
+<ul>
+<li>onboarding so best practices and patterns are in from the start</li>
+<li>continuous education to bring existing ppl onboard</li>
+</ul></li>
+
+<li><p>good discoverabily for tooling resources</p>
+
+<ul>
+<li>if there isn&rsquo;t strong discoverabily, ppl won&rsquo;t use your solution</li>
+</ul></li>
+
+<li><p>how to continuously update your customers on what&rsquo;s new and improved?</p>
+
+<ul>
+<li>figure out what kind of avenue is effective?
+
+<ul>
+<li>brown bag lunches</li>
+<li>newsletters</li>
+<li>road shows</li>
+<li>onboarding sessions/continuous sessions</li>
+</ul></li>
+<li>takes all types of communitation all the time</li>
+</ul></li>
+
+<li><p>generalized vs. specialized needs</p>
+
+<ul>
+<li>too generalized leads to least-common-denominator</li>
+<li>too specific and it can&rsquo;t be shared well</li>
+<li>solution? try to find a happy medium, then
+
+<ul>
+<li>make their internal tooling to be extensible</li>
+<li>inner opensource</li>
+</ul></li>
+</ul></li>
+
+<li><p>for a long time, they had no dedicated product management</p>
+
+<ul>
+<li>start out as team doing customer feedback, requirement gathering, prioritizing</li>
+<li>at some point, there is a scale/complexity that PMs are needed
+
+<ul>
+<li>now they are trying to create a PM roll</li>
+<li>not only does what they did before, but can take on more and be more focused</li>
+</ul></li>
+</ul></li>
+
+<li><p>finding the right engagement model</p>
+
+<ul>
+<li>working directly with teams creates a customer -&gt; provider relationship</li>
+<li>working with distributed central teams makes them more partners than customers
+
+<ul>
+<li>they have a closer understanding to what their teams need, can help manage the general/specialized issue</li>
+</ul></li>
+</ul></li>
+
+<li><p>driving change</p>
+
+<ul>
+<li>finding the key updates/migrations and prioritizing/pushing that</li>
+<li>adoption curve
+
+<ul>
+<li>early, fast, no problem</li>
+<li>medium once it is more mature</li>
+<li>not done until that tail is done
+
+<ul>
+<li>current just works</li>
+<li>has to decide what is good for a couple lagging teams vs. the company</li>
+</ul></li>
+</ul></li>
+</ul></li>
+
+<li><p>align central teams</p>
+
+<ul>
+<li>many central teams
+
+<ul>
+<li>security, systems, data, etc.</li>
+</ul></li>
+<li>have to align central teams before approaching customers prevents tons of &ldquo;tiny&rdquo; requests slowing things done</li>
+</ul></li>
+
+<li><p>&ldquo;Highly aligned, loosely coupled&rdquo;</p></li>
+
+<li><p>Fragmentation:</p>
+
+<ul>
+<li>teams developing a solution that already exists causes fragmentation
+
+<ul>
+<li>accidental:
+
+<ul>
+<li>issue with developer awareness/outreach/discoverability</li>
+</ul></li>
+<li>deliberate:
+
+<ul>
+<li>harder to address</li>
+<li>team know a solution exists, but rejects it</li>
+<li>important signal to determine shortcoming</li>
+<li>could be an awareness issue</li>
+<li>could be a real gap</li>
+</ul></li>
+</ul></li>
+</ul></li>
+
+<li><p>celebrate adoption</p>
+
+<ul>
+<li>adoption is a key metric</li>
+<li>when the metric is met/good, need to recognize that</li>
+</ul></li>
+
+<li><p>soft metrics are valuable</p>
+
+<ul>
+<li>hard metrics can sometimes prevent you from seeing the forest through the trees</li>
+<li>ex. customer happiness</li>
+</ul></li>
+</ul>
+
+<p>QA
+* guardrails and how that works with central teams
+    * different concept than gatekeeprs
+    * surface potential issues as suggestions and &ldquo;are you sure you want to do that&rdquo;
+        * ex. spinniker from making large changes during busiest times. Are you sure?</p>
+
+<ul>
+<li><p>how do you keep teams&rsquo; trust and not becoming ticket hubs?</p>
+
+<ul>
+<li>constant engagement, documentation</li>
+<li>ask for feedback, get an idea of what teams need, and then circle back when you address that need</li>
+</ul></li>
+
+<li><p>authority that enforces mandate for ?</p>
+
+<ul>
+<li>sometimes, specifically in the security domain, the central teams force something</li>
+<li>responsiblity that developers make good, sound decisions?
+
+<ul>
+<li>not using something thats java cause youre a ruby guy is not a good solution</li>
+</ul></li>
+</ul></li>
+
+<li><p>how do you resolve conflict?</p>
+
+<ul>
+<li>tough, but still works on escalating to managers</li>
+</ul></li>
+
+<li><p>in early stage of devops transformation, when do you allow teams to have more freedom?</p>
+
+<ul>
+<li>if the teams can handle the responsibility and trust of owning their own stuff, then they can make their own decisions apart from the central team</li>
+</ul></li>
+
+<li><p>what is the feedback mechanism</p>
+
+<ul>
+<li>feedback isn&rsquo;t going to be coming in voluntarily</li>
+<li>frequently reach out to teams to get feedback
+
+<ul>
+<li>surveys have gotten good responses in the last few years</li>
+</ul></li>
+</ul></li>
+
+<li><p>size of central teams as it relates to the size of the engineering teams</p>
+
+<ul>
+<li>try to think of it as leverage, leverage being the ratio of value of the product vs. cost of the product
+
+<ul>
+<li>if they grow at the same rate, then they maintain leverage, but not providing more value</li>
+<li>if they grow faster, then they lose leverage, harder to justify their grown because the ROI is impacted</li>
+<li>best is slightly under the same rate, because they&rsquo;ll provide more value with fewer resources</li>
+</ul></li>
+</ul></li>
+
+<li><p>no goverance, no chargebacks</p>
+
+<ul>
+<li>only have one product</li>
+</ul></li>
+
+<li><p>one trick for newsletters</p>
+
+<ul>
+<li>distill updates as small as possible
+
+<ul>
+<li>the most impactful, relevant changes</li>
+</ul></li>
+<li>3-page newletters with every change gets thrown out</li>
+</ul></li>
+
+<li><p>do you embbed central team members in other teams?</p>
+
+<ul>
+<li>central team members go work in app teams for <sup>6</sup>&frasl;<sub>9</sub> months, get real customer hands-on experience</li>
+<li>at the same time, they bring the central team knowledge to the app team, closing gaps and awareness</li>
+<li>forms stronger bonds, which helps with conflict resolution</li>
+</ul></li>
+
+<li><p>when to decide to scale the central team?</p>
+
+<ul>
+<li>combination of the signal/happiness of customers</li>
+<li>analyzing portfolio, and figure out what gaps</li>
+<li>try to run lean, not making stuff that doesn&rsquo;t have a need</li>
+<li>up to each team manager w/that decision</li>
+</ul></li>
+
+<li><p>w/lack of adoption, does the central team throw out their solution and supports the one that takes off?</p>
+
+<ul>
+<li>no prescribed answer</li>
+<li>centralize the product</li>
+<li>work with the teams to decide if they want it centralized or not</li>
+</ul></li>
+
+<li><p>how to handle central team priorities? how do you balance the need between new tech and what customers want?</p>
+
+<ul>
+<li>its a balance</li>
+<li>try to be situationally aware and understand the landscape</li>
+<li>understand the primary business needs</li>
+<li>understand the tech trends</li>
+<li>understand immediate customer needs</li>
+<li>really good product managers come in here to make the hard choices
+
+<ul>
+<li>being deliberate and communicating it to the rest of the company</li>
+</ul></li>
+</ul></li>
+
+<li><p>centralized security team</p>
+
+<ul>
+<li>have to work closely, because they often use the platform team to push out security changes</li>
+</ul></li>
+</ul>
+
+<p>Ruslan Meshenberg
+@rusmeshenberg</p>
+
+</div>
+
+
+    </main>
+
+    
+  </body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="//gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.45.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SRV343-R1: Best Practices for Safe Deployments on AWS Lambda and Amazon API Gateway &middot; My New Hugo Site</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="css/poole.css">
+  <link type="text/css" rel="stylesheet" href="css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="My New Hugo Site" />
+
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href=""><h1>My New Hugo Site</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2018. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>SRV343-R1: Best Practices for Safe Deployments on AWS Lambda and Amazon API Gateway</h1>
+  <time datetime=0001-01-01T00:00:00Z class="post-date">Mon, Jan 1, 0001</time>
+  <ul>
+<li>flexible schema much easier to deal with when using serverless
+
+<ul>
+<li>don&rsquo;t need to deal with updates</li>
+</ul></li>
+<li>lambda@the edge is like lamdba, but at the edge of your network, so it can do smarter routing to resources for ex.
+
+<ul>
+<li>for ex. feature flags to give beta version to a particular company</li>
+</ul></li>
+
+<li><p>when you update a lambda, it creates an immutable version ID</p>
+
+<ul>
+<li>Aliases can be defined and linked to version IDs</li>
+<li>Allows for ex. evens to go to particular versions</li>
+<li>allows for weight between versions
+
+<ul>
+<li>ex. prod points 95% of invocations @ v1, 5% @ v2, for canary testing</li>
+<li>invocations are distributed in a round-robin fashion</li>
+</ul></li>
+<li>in SAM, can configure deployment strategy to funtions
+
+<ul>
+<li>allows automated weight manipulation</li>
+<li>if no errors, keep ramping up (10 percent, increasing every 10 minutes for ex.)</li>
+<li>requires monitoring
+
+<ul>
+<li>hooks and alarms (Cloudwatch alarm)</li>
+<li>suggests to link canary metrics to customer action rather than just infrastructure</li>
+<li>pre and post traffic functions that calls back to code deploy to accept/reject version</li>
+</ul></li>
+</ul></li>
+</ul></li>
+
+<li><p>similar weights can be added to API gateway to send traffic to certain API</p></li>
+</ul>
+
+<p>Life stages of Lambda development</p>
+
+<p>V1:
+* User manually configures the function in the UI
+    * doesn&rsquo;t allow multiple users
+    * not saved outside of the UI
+V2:
+* Something in git changes, that updates the lambda
+V3:
+* Similar to V2, but has multiple environments, with testing before prod
+V4:
+* similar to V3, but the testing portion is build out into canary deployments
+* pre traffic hooks can fail deployments, so customers don&rsquo;t see any errors
+* once the canaries are happy, 100% of traffic is on the new version</p>
+
+<p>Why would we move to serverless when things are working currently
+* serverless is easy to create a sandbox environment for external developer to play with
+    * just define another SAM configuration
+* more scalable because it&rsquo;s there automatically
+* no idle capacity
+* no server admin</p>
+
+<ul>
+<li><p>best practices</p>
+
+<ul>
+<li>function duration</li>
+<li>control your retries</li>
+<li>know your limits</li>
+<li>use versioning</li>
+<li>amazon cloudwatch - insert logging statements!</li>
+<li>protect your Lambda functions with IAM roles
+
+<ul>
+<li>even like allowing only access to certain fields in a dynamo table</li>
+</ul></li>
+<li>plan for dependencies when setting timeout value</li>
+<li>test test test - best way to turn functions is by testing</li>
+</ul></li>
+
+<li><p>evaluating the move to serverless is a good time to review current design and architecture</p>
+
+<ul>
+<li>ie. why use postgres if most queries are just lookups</li>
+</ul></li>
+
+<li><p>serverless and databases</p>
+
+<ul>
+<li>know your data</li>
+<li>know the available cost model and match it to your needs</li>
+<li>tests at scale</li>
+<li>encryption</li>
+<li>secure your flow - IAM roles</li>
+</ul></li>
+
+<li><p>lessons learned from journey to serverless</p>
+
+<ul>
+<li>think microservices</li>
+<li>canary deployments</li>
+<li>cold start
+
+<ul>
+<li>not as much of a problem as ppl say</li>
+<li>aws adjusts cold starts over life of the function, learns about it</li>
+<li>review design if cold starts are impacting you, ie. function runs once a day</li>
+</ul></li>
+<li>yes/no functions
+
+<ul>
+<li>keep functions simple</li>
+</ul></li>
+<li>events source</li>
+<li>distributed tracing</li>
+<li>environmental variables</li>
+</ul></li>
+
+<li><p>include this kind of stuff ^ in your MVP</p></li>
+</ul>
+
+<p>Why does Capital One use Go?
+* Go&rsquo;s native concurrency is a boon for network applications that live and die on concurrency
+* modern apps are designed to be cloud-native and to take advantage of loosely coupled cloud services</p>
+
+</div>
+
+
+    </main>
+
+    
+  </body>
+</html>

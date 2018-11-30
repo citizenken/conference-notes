@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="//gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.45.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> &middot; My New Hugo Site</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="css/poole.css">
+  <link type="text/css" rel="stylesheet" href="css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="My New Hugo Site" />
+
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href=""><h1>My New Hugo Site</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2018. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1></h1>
+  <time datetime=0001-01-01T00:00:00Z class="post-date">Mon, Jan 1, 0001</time>
+  
+
+<h1 id="how-amazon-releases-mission-critical-software">How Amazon releases Mission-critical Software</h1>
+
+<ul>
+<li>executes thousands of deploys at any give second</li>
+<li>99.996% of deploys execute without problems</li>
+
+<li><p>always pushing to 100%</p></li>
+
+<li><p>much of what enables Amazon do do ^ is in our tooling</p></li>
+</ul>
+
+<h3 id="tech-and-cultural-landscape-at-amazon">Tech and cultural landscape at Amazon</h3>
+
+<ul>
+<li>two pizza teams</li>
+<li>8 engineers is still the average size at Amazon
+
+<ul>
+<li>communication cost is expensive</li>
+</ul></li>
+<li>end to end ownership</li>
+<li>Amazon is a &ldquo;federation of startups&rdquo;
+
+<ul>
+<li>given a domain, most decisions are the teams</li>
+<li>teams pick tech stack, ratio of roles, own service end to end</li>
+</ul></li>
+<li>Amazon&rsquo;s service oriented architecture
+
+<ul>
+<li>services have public contract</li>
+<li>only way other services talk to you</li>
+<li>allows for constant refactoring behind the contract</li>
+</ul></li>
+<li>Local dev environment is the wild west
+
+<ul>
+<li>Agile-ish</li>
+<li>&ldquo;The Process&rdquo; the release/debug process/etc. will ensure you don&rsquo;t cut corners</li>
+<li>iterate as quickly as you can</li>
+<li>your host is a service
+
+<ul>
+<li>local service running is easy</li>
+<li>local dev can interact with other services out in the different environments that you have</li>
+</ul></li>
+</ul></li>
+
+<li><p>With all these services, mangement is tough</p>
+
+<ul>
+<li>tolling helps organize all of that</li>
+<li>focus on foundational tools, the building blocks first
+
+<ul>
+<li>ex. S3, EC2, then more complex serices on top</li>
+</ul></li>
+<li>internal marketplace
+
+<ul>
+<li>share tooling/practices/solutions</li>
+<li>wait for the best of the ^ ideas to bubble to the top</li>
+<li>the best are then devloped on top of and &ldquo;funded,&rdquo; resources are allocated</li>
+</ul></li>
+</ul></li>
+
+<li><p>their pipelines are aggressively pessimistic</p>
+
+<ul>
+<li>to prevent changes from getting stuck in the process, ie. integration stuff lasting around</li>
+<li>being harsh on changes makes sure that only the best</li>
+</ul></li>
+
+<li><p>Git in Amazon</p>
+
+<ul>
+<li>Called Gitfarm
+
+<ul>
+<li>replication for free</li>
+<li>finetuned access control, file by file, etc.</li>
+<li>code search on commit</li>
+<li>CodeCommit has many of those features</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="tooling-philosophy">Tooling philosophy</h3>
+
+<h3 id="code-review-build-and-the-pre-mortem">Code review, build and the pre-mortem</h3>
+
+<ul>
+<li><p>rules on top of commits to mainline based</p>
+
+<ul>
+<li>rules like compliance as early as possible</li>
+<li>certain files require certain reviewers</li>
+</ul></li>
+
+<li><p>build process</p>
+
+<ul>
+<li>global dependency closure
+
+<ul>
+<li>parent POMs?</li>
+<li>ex. 1 version of Spring for the whole company</li>
+<li>hyper aware of who is using what
+
+<ul>
+<li>ex. if a dependency is compromised, easy to remove that version</li>
+</ul></li>
+</ul></li>
+<li>unit testing</li>
+<li>static analysis</li>
+</ul></li>
+
+<li><p>the pre-mortem</p>
+
+<ul>
+<li>&ldquo;correction of errors&rdquo;
+
+<ul>
+<li>document all the bad ways the software could cause problems
+
+<ul>
+<li>what is the worst thing that could happen</li>
+<li>how do we mitigate it</li>
+<li>how do we fix it</li>
+</ul></li>
+</ul></li>
+<li>don&rsquo;t do this process all the time</li>
+<li>large changes</li>
+
+<li><p>sensitive code areas</p>
+
+<h3 id="pipelining-and-deployment">Pipelining and deployment</h3></li>
+</ul></li>
+
+<li><p>3 envs</p>
+
+<ul>
+<li>test env: wild west</li>
+<li>integration: configured and looks like prod &lt;- interesting
+
+<ul>
+<li>called public contracts for dependent services</li>
+<li>prevents having a unique env</li>
+</ul></li>
+<li>production</li>
+</ul></li>
+
+<li><p>rules around releasing w/regions and AZs to prevent widespread failures</p></li>
+
+<li><p>picture: columns are stages of the release pipeline, depth is the tests that are running</p></li>
+</ul>
+
+</div>
+
+
+    </main>
+
+    
+  </body>
+</html>
