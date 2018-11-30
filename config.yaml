@@ -9,7 +9,7 @@ params:
   search:
     client: fuse
   info:
-    description: Minimalist theme for Hugo
+    description: My collection of notes from conferences I've attended
     title404: Nothing's here!
   sidebar:
     enable: true
