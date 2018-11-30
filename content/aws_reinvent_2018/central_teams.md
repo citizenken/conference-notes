@@ -61,8 +61,10 @@ two opensource stories:
 * central team invests in educaion
     * onboarding so best practices and patterns are in from the start
     * continuous education to bring existing ppl onboard
+
 * good discoverabily for tooling resources
     * if there isn't strong discoverabily, ppl won't use your solution
+
 * how to continuously update your customers on what's new and improved?
     * figure out what kind of avenue is effective?
         * brown bag lunches
@@ -77,11 +79,13 @@ two opensource stories:
     * solution? try to find a happy medium, then
         * make their internal tooling to be extensible
         * inner opensource
+
 * for a long time, they had no dedicated product management
     * start out as team doing customer feedback, requirement gathering, prioritizing
     * at some point, there is a scale/complexity that PMs are needed
         * now they are trying to create a PM roll
         * not only does what they did before, but can take on more and be more focused
+
 * finding the right engagement model
     * working directly with teams creates a customer -> provider relationship
     * working with distributed central teams makes them more partners than customers
