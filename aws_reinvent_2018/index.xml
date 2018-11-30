@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>AWS Re:Invent 2018 on My New Hugo Site</title>
+    <title>AWS Re:Invent 2018 on Ken&#39;s Conference Notes</title>
     <link>/conference-notes/aws_reinvent_2018/</link>
-    <description>Recent content in AWS Re:Invent 2018 on My New Hugo Site</description>
+    <description>Recent content in AWS Re:Invent 2018 on Ken&#39;s Conference Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
@@ -19,40 +19,6 @@
       <description>Codebuild builder session * pay by minute * infinite scale * no queue times * docker based
 Jenkins plugin for codebuild to move the build step to AWS
 https://github.com/johnhanks1/jekyll_example</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/conference-notes/aws_reinvent_2018/codepipeline/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/conference-notes/aws_reinvent_2018/codepipeline/</guid>
-      <description>pipeline talk
-cd best practices * VCS * automated builds * automated deployments * deploy to &amp;gt; 1 instances (HA, spread load) * unit tests * integration tests (selenium, functional, syntentic users) * deliver * operations dashboard
-Tools in the talk - AWS specific * monitoring - cloudwatch * sns - notifications * lambda * aws codedeploy/codepipeline for delivery * DEV309 - serverless + containers codedeploy/codepipeline
-Add saftey to rolling deployments * check health * ensure minimum instances * rollback</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/conference-notes/aws_reinvent_2018/coinbase_sre/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/conference-notes/aws_reinvent_2018/coinbase_sre/</guid>
-      <description>Coinbase SRE talk * SRE and DevOps * actually work nicely together
-Key Insights 1. measure and improve human, organizational and machine systems * measure everything always 2. SRE is a move from reactive to proactive event mgmt * eliminate toil and eliminate them * toil = manual operational work that doesn&#39;t scale 3. Provide organizational back pressure mechanism * delay features to clean up tech debt * don&#39;t deploy new code until the app is more reliable * push back to teams/the org * feedback loop  How to convert ppl * set early expectations * have to get C-level buy in * takes time</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/conference-notes/aws_reinvent_2018/comcast/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/conference-notes/aws_reinvent_2018/comcast/</guid>
-      <description>comcast serverless talk
-pluses * streamlined devops, codepipeline * supports a lot of languages * tag direct costs to projects
-considerations: * know what specialties are * certain languages not supported * need to deal with cold starts, concurrent read/writes, etc. * migration from non-aws requires focus and commitment
- kinesis firehose to watch for inbound connections faster than humans could do, and then try to shut down (ex. using &amp;ldquo;i am not a robot&amp;rdquo;)</description>
     </item>
     
     <item>
@@ -88,13 +54,62 @@ considerations: * know what specialties are * certain languages not supported * 
     </item>
     
     <item>
-      <title>DEV70: Role of Central Teams in DevOps Organizations</title>
+      <title>Accelerate Innovation &amp; Maximize Business Value with Serverless Apps [SRV212]</title>
+      <link>/conference-notes/aws_reinvent_2018/comcast/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/conference-notes/aws_reinvent_2018/comcast/</guid>
+      <description>pluses * streamlined devops, codepipeline * supports a lot of languages * tag direct costs to projects
+considerations: * know what specialties are * certain languages not supported * need to deal with cold starts, concurrent read/writes, etc. * migration from non-aws requires focus and commitment
+ kinesis firehose to watch for inbound connections faster than humans could do, and then try to shut down (ex. using &amp;ldquo;i am not a robot&amp;rdquo;)</description>
+    </item>
+    
+    <item>
+      <title>Advanced Continuous Delivery Best Practices [DEV317]</title>
+      <link>/conference-notes/aws_reinvent_2018/advanced_cd_best_practices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/conference-notes/aws_reinvent_2018/advanced_cd_best_practices/</guid>
+      <description>cd best practices * VCS * automated builds * automated deployments * deploy to &amp;gt; 1 instances (HA, spread load) * unit tests * integration tests (selenium, functional, syntentic users) * deliver * op Tools in the talk - AWS specific * monitoring - cloudwatch * sns - notifications * lambda * aws codedeploy/codepipeline for delivery * DEV309 - serverless + containers codedeploy/codepipeline
+Add saftey to rolling deployments * check health * ensure minimum instances * rollback</description>
+    </item>
+    
+    <item>
+      <title>Best Practices for Safe Deployments on AWS Lambda and Amazon API Gateway [SRV343]</title>
+      <link>/conference-notes/aws_reinvent_2018/safe_serverless_deployments/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/conference-notes/aws_reinvent_2018/safe_serverless_deployments/</guid>
+      <description>flexible schema much easier to deal with when using serverless  don&amp;rsquo;t need to deal with updates  lambda@the edge is like lamdba, but at the edge of your network, so it can do smarter routing to resources for ex.  for ex. feature flags to give beta version to a particular company  when you update a lambda, it creates an immutable version ID
+ Aliases can be defined and linked to version IDs Allows for ex.</description>
+    </item>
+    
+    <item>
+      <title>Building SRE from Scratch at Coinbase during Hypergrowth [DEV315]</title>
+      <link>/conference-notes/aws_reinvent_2018/coinbase_sre/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/conference-notes/aws_reinvent_2018/coinbase_sre/</guid>
+      <description>Key Insights  measure and improve human, organizational and machine systems  measure everything always  SRE is a move from reactive to proactive event mgmt  eliminate toil and eliminate them  toil = manual operational work that doesn&amp;rsquo;t scale   Provide organizational back pressure mechanism  delay features to clean up tech debt don&amp;rsquo;t deploy new code until the app is more reliable push back to teams/the org feedback loop   How to convert ppl * set early expectations * have to get C-level buy in * takes time</description>
+    </item>
+    
+    <item>
+      <title>Moving to DevOps the Amazon Way [DEV210]</title>
+      <link>/conference-notes/aws_reinvent_2018/amazon_devops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/conference-notes/aws_reinvent_2018/amazon_devops/</guid>
+      <description>    50 million deploys/year tools start to dictate behavior cultural philosphy  how often do we want to interact with our customers   timeline
+ 2001 amazon was a monolith monolith had a lot of interdependencies went back and isolated independent units  cart stock labeling  each unit gets 2 pizza teams after breaking up the units, agile was easier creating a multi-displinary team is NOT devops  each team member should have multiple skills, with fullstack ownership learn new things, compliment team  everything is code, so everything can be tested guardrails for self-service &amp;lt;&amp;ndash; key idea  opinionated templates helps bootstrap quickly without falling off the cliff   </description>
+    </item>
+    
+    <item>
+      <title>Role of Central Teams in DevOps Organizations [DEV70]</title>
       <link>/conference-notes/aws_reinvent_2018/central_teams/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/conference-notes/aws_reinvent_2018/central_teams/</guid>
-      <description>DEV70: Role of Central Teams in DevOps Organizations
- small companies have small Teams
+      <description>small companies have small Teams
  as it grows, central teams develop (ex. tools, platfomrm, infra)
  becomes a &amp;ldquo;fractal&amp;rdquo; of central teams
  different BUs have central teams that talk to a central time  moving from traditional dev/ops/qa model to full end-end ownership
@@ -103,23 +118,12 @@ considerations: * know what specialties are * certain languages not supported * 
     </item>
     
     <item>
-      <title>How Amazon Does Devops</title>
-      <link>/conference-notes/aws_reinvent_2018/amazon_devops/</link>
+      <title>Unleash Team Productivity with Real-Time Operations [DEV203]</title>
+      <link>/conference-notes/aws_reinvent_2018/real_time_operations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/conference-notes/aws_reinvent_2018/amazon_devops/</guid>
-      <description> 50 million deploys/year tools start to dictate behavior cultural philosphy  how often do we want to interact with our customers   timeline
- 2001 amazon was a monolith monolith had a lot of interdependencies went back and isolated independent units  cart stock labeling  each unit gets 2 pizza teams after breaking up the units, agile was easier creating a multi-displinary team is NOT devops  each team member should have multiple skills, with fullstack ownership learn new things, compliment team  everything is code, so everything can be tested guardrails for self-service &amp;lt;&amp;ndash; key idea  opinionated templates helps bootstrap quickly without falling off the cliff   </description>
-    </item>
-    
-    <item>
-      <title>SRV343-R1: Best Practices for Safe Deployments on AWS Lambda and Amazon API Gateway</title>
-      <link>/conference-notes/aws_reinvent_2018/safe_serverless_deployments/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/conference-notes/aws_reinvent_2018/safe_serverless_deployments/</guid>
-      <description>flexible schema much easier to deal with when using serverless  don&amp;rsquo;t need to deal with updates  lambda@the edge is like lamdba, but at the edge of your network, so it can do smarter routing to resources for ex.  for ex. feature flags to give beta version to a particular company  when you update a lambda, it creates an immutable version ID
- Aliases can be defined and linked to version IDs Allows for ex.</description>
+      <guid>/conference-notes/aws_reinvent_2018/real_time_operations/</guid>
+      <description>This talk was ok. The presentor was a bit much. I left early to attend another session.</description>
     </item>
     
   </channel>

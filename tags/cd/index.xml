@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cd on Ken&#39;s Conference Notes</title>
+    <link>/conference-notes/tags/cd/</link>
+    <description>Recent content in Cd on Ken&#39;s Conference Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/conference-notes/tags/cd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Advanced Continuous Delivery Best Practices [DEV317]</title>
+      <link>/conference-notes/aws_reinvent_2018/advanced_cd_best_practices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/conference-notes/aws_reinvent_2018/advanced_cd_best_practices/</guid>
+      <description>cd best practices * VCS * automated builds * automated deployments * deploy to &amp;gt; 1 instances (HA, spread load) * unit tests * integration tests (selenium, functional, syntentic users) * deliver * op Tools in the talk - AWS specific * monitoring - cloudwatch * sns - notifications * lambda * aws codedeploy/codepipeline for delivery * DEV309 - serverless + containers codedeploy/codepipeline
+Add saftey to rolling deployments * check health * ensure minimum instances * rollback</description>
+    </item>
+    
+  </channel>
+</rss>

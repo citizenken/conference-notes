@@ -1,180 +1,159 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
-<head>
-  <link href="//gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.45.1" />
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Minimalist theme for Hugo'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='Ken&#39;s Conference Notes'>
+<meta property='og:description' content='Minimalist theme for Hugo'>
+<meta property='og:url' content='/conference-notes/'>
+<meta property='og:site_name' content='Ken&#39;s Conference Notes'>
+<meta property='og:type' content='website'><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.45.1" />
+
+  <title>Ken&#39;s Conference Notes</title>
+  <link rel='canonical' href='/conference-notes/'>
+  
+    <link href="/conference-notes/index.xml" rel="alternate" type="application/rss+xml" title="Ken&#39;s Conference Notes" />
+  
+  
+  <link rel='icon' href='/conference-notes/favicon.ico'>
+<link rel='stylesheet' href='/conference-notes/assets/css/main.4a10984a.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
 
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>My New Hugo Site</title>
-
-  
-  <link type="text/css" rel="stylesheet" href="/conference-notes/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="/conference-notes/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="/conference-notes/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="/conference-notes/css/hyde.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
-
-
-  
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
-
-  
-  <link href="/conference-notes/index.xml" rel="alternate" type="application/rss+xml" title="My New Hugo Site" />
-
-  
 </head>
+<body class='home type-page has-sidebar'>
 
-  <body class=" ">
-  <aside class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <a href="/conference-notes/"><h1>My New Hugo Site</h1></a>
-      <p class="lead">
-      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
-      </p>
-    </div>
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
 
-    <nav>
-      <ul class="sidebar-nav">
-        <li><a href="/conference-notes/">Home</a> </li>
-        
-      </ul>
-    </nav>
-
-    <p>&copy; 2018. All rights reserved. </p>
-  </div>
-</aside>
-
-    <main class="content container">
-    <div class="posts">
-<article class="post">
-  <h1 class="post-title">
-    <a href="/conference-notes/aws_reinvent_2018/codebuild_builder_session/"></a>
-  </h1>
-  <time datetime="0001-01-01T00:00:00Z" class="post-date">Mon, Jan 1, 0001</time>
-  Codebuild builder session * pay by minute * infinite scale * no queue times * docker based
-Jenkins plugin for codebuild to move the build step to AWS
-https://github.com/johnhanks1/jekyll_example
-  
-</article><article class="post">
-  <h1 class="post-title">
-    <a href="/conference-notes/aws_reinvent_2018/codepipeline/"></a>
-  </h1>
-  <time datetime="0001-01-01T00:00:00Z" class="post-date">Mon, Jan 1, 0001</time>
-  pipeline talk
-cd best practices * VCS * automated builds * automated deployments * deploy to &gt; 1 instances (HA, spread load) * unit tests * integration tests (selenium, functional, syntentic users) * deliver * operations dashboard
-Tools in the talk - AWS specific * monitoring - cloudwatch * sns - notifications * lambda * aws codedeploy/codepipeline for delivery * DEV309 - serverless + containers codedeploy/codepipeline
-Add saftey to rolling deployments * check health * ensure minimum instances * rollback
-  
-  <div class="read-more-link">
-    <a href="/conference-notes/aws_reinvent_2018/codepipeline/">Read More…</a>
-  </div>
-  
-</article><article class="post">
-  <h1 class="post-title">
-    <a href="/conference-notes/aws_reinvent_2018/coinbase_sre/"></a>
-  </h1>
-  <time datetime="0001-01-01T00:00:00Z" class="post-date">Mon, Jan 1, 0001</time>
-  Coinbase SRE talk * SRE and DevOps * actually work nicely together
-Key Insights 1. measure and improve human, organizational and machine systems * measure everything always 2. SRE is a move from reactive to proactive event mgmt * eliminate toil and eliminate them * toil = manual operational work that doesn't scale 3. Provide organizational back pressure mechanism * delay features to clean up tech debt * don't deploy new code until the app is more reliable * push back to teams/the org * feedback loop  How to convert ppl * set early expectations * have to get C-level buy in * takes time
-  
-  <div class="read-more-link">
-    <a href="/conference-notes/aws_reinvent_2018/coinbase_sre/">Read More…</a>
-  </div>
-  
-</article><article class="post">
-  <h1 class="post-title">
-    <a href="/conference-notes/aws_reinvent_2018/comcast/"></a>
-  </h1>
-  <time datetime="0001-01-01T00:00:00Z" class="post-date">Mon, Jan 1, 0001</time>
-  comcast serverless talk
-pluses * streamlined devops, codepipeline * supports a lot of languages * tag direct costs to projects
-considerations: * know what specialties are * certain languages not supported * need to deal with cold starts, concurrent read/writes, etc. * migration from non-aws requires focus and commitment
- kinesis firehose to watch for inbound connections faster than humans could do, and then try to shut down (ex. using &ldquo;i am not a robot&rdquo;)
-  
-  <div class="read-more-link">
-    <a href="/conference-notes/aws_reinvent_2018/comcast/">Read More…</a>
-  </div>
-  
-</article><article class="post">
-  <h1 class="post-title">
-    <a href="/conference-notes/aws_reinvent_2018/multicloud_myth/"></a>
-  </h1>
-  <time datetime="0001-01-01T00:00:00Z" class="post-date">Mon, Jan 1, 0001</time>
-  
-  
-</article><article class="post">
-  <h1 class="post-title">
-    <a href="/conference-notes/aws_reinvent_2018/releasing_mission_critical_software/"></a>
-  </h1>
-  <time datetime="0001-01-01T00:00:00Z" class="post-date">Mon, Jan 1, 0001</time>
-  How Amazon releases Mission-critical Software  executes thousands of deploys at any give second 99.996% of deploys execute without problems always pushing to 100%
- much of what enables Amazon do do ^ is in our tooling
-  Tech and cultural landscape at Amazon  two pizza teams 8 engineers is still the average size at Amazon  communication cost is expensive  end to end ownership Amazon is a &ldquo;federation of startups&rdquo;  given a domain, most decisions are the teams teams pick tech stack, ratio of roles, own service end to end  Amazon&rsquo;s service oriented architecture  services have public contract only way other services talk to you allows for constant refactoring behind the contract  Local dev environment is the wild west  Agile-ish &ldquo;The Process&rdquo; the release/debug process/etc.
-  
-  <div class="read-more-link">
-    <a href="/conference-notes/aws_reinvent_2018/releasing_mission_critical_software/">Read More…</a>
-  </div>
-  
-</article><article class="post">
-  <h1 class="post-title">
-    <a href="/conference-notes/aws_reinvent_2018/serverless_patterns/"></a>
-  </h1>
-  <time datetime="0001-01-01T00:00:00Z" class="post-date">Mon, Jan 1, 0001</time>
-  Severless patterns notes: * traits of serverless: 1. no server or container mgmt 2. flexible scaling (horizontal is taken care of) 3. HA, in all AZs 4. dont pay for idle
- lambda execution
- dl code state new container bootstrap the runtime (java/ruby/python, etc. environtment) run the code  steps 1-3 are &ldquo;cold start&rdquo; so there is a delay, but subsequent requests use the warmed containers
- tuning function resource helps with costs and cold/warm uses
-  
-  <div class="read-more-link">
-    <a href="/conference-notes/aws_reinvent_2018/serverless_patterns/">Read More…</a>
-  </div>
-  
-</article><article class="post">
-  <h1 class="post-title">
-    <a href="/conference-notes/aws_reinvent_2018/central_teams/">DEV70: Role of Central Teams in DevOps Organizations</a>
-  </h1>
-  <time datetime="0001-01-01T00:00:00Z" class="post-date">Mon, Jan 1, 0001</time>
-  DEV70: Role of Central Teams in DevOps Organizations
- small companies have small Teams
- as it grows, central teams develop (ex. tools, platfomrm, infra)
- becomes a &ldquo;fractal&rdquo; of central teams
- different BUs have central teams that talk to a central time  moving from traditional dev/ops/qa model to full end-end ownership
- with DevOps teams, why do we need central teams?
- most devops teams, while their work is different, they have the same software development lifecycle
-  
-  <div class="read-more-link">
-    <a href="/conference-notes/aws_reinvent_2018/central_teams/">Read More…</a>
-  </div>
-  
-</article><article class="post">
-  <h1 class="post-title">
-    <a href="/conference-notes/aws_reinvent_2018/amazon_devops/">How Amazon Does Devops</a>
-  </h1>
-  <time datetime="0001-01-01T00:00:00Z" class="post-date">Mon, Jan 1, 0001</time>
-   50 million deploys/year tools start to dictate behavior cultural philosphy  how often do we want to interact with our customers   timeline
- 2001 amazon was a monolith monolith had a lot of interdependencies went back and isolated independent units  cart stock labeling  each unit gets 2 pizza teams after breaking up the units, agile was easier creating a multi-displinary team is NOT devops  each team member should have multiple skills, with fullstack ownership learn new things, compliment team  everything is code, so everything can be tested guardrails for self-service &lt;&ndash; key idea  opinionated templates helps bootstrap quickly without falling off the cliff   
-  
-</article><article class="post">
-  <h1 class="post-title">
-    <a href="/conference-notes/aws_reinvent_2018/safe_serverless_deployments/">SRV343-R1: Best Practices for Safe Deployments on AWS Lambda and Amazon API Gateway</a>
-  </h1>
-  <time datetime="0001-01-01T00:00:00Z" class="post-date">Mon, Jan 1, 0001</time>
-  flexible schema much easier to deal with when using serverless  don&rsquo;t need to deal with updates  lambda@the edge is like lamdba, but at the edge of your network, so it can do smarter routing to resources for ex.  for ex. feature flags to give beta version to a particular company  when you update a lambda, it creates an immutable version ID
- Aliases can be defined and linked to version IDs Allows for ex.
-  
-  <div class="read-more-link">
-    <a href="/conference-notes/aws_reinvent_2018/safe_serverless_deployments/">Read More…</a>
-  </div>
-  
-</article>
-</div>
-    </main>
-
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
     
-  </body>
+    <div class='logo'>
+      <a href='/conference-notes/'>
+        <img src='/conference-notes/images/logo.png'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+    Ken&#39;s Conference Notes
+    </h2>
+    <div class='desc'>
+    Minimalist theme for Hugo
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/conference-notes/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item current'>
+  <a aria-current='page' href='/conference-notes/'>Home</a></li><li class='item'>
+  <a href='/conference-notes/aws_reinvent_2018/'>AWS Re:Invent 2018</a></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Tags</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/conference-notes/tags/cd/' style='font-size:1em'>Cd</a>
+      </li><li>
+        <a href='/conference-notes/tags/codepipeline/' style='font-size:1em'>Codepipeline</a>
+      </li><li>
+        <a href='/conference-notes/tags/culture/' style='font-size:1.5em'>Culture</a>
+      </li><li>
+        <a href='/conference-notes/tags/customer-story/' style='font-size:1.25em'>Customer Story</a>
+      </li><li>
+        <a href='/conference-notes/tags/devops/' style='font-size:1.75em'>Devops</a>
+      </li><li>
+        <a href='/conference-notes/tags/serverless/' style='font-size:1em'>Serverless</a>
+      </li><li>
+        <a href='/conference-notes/tags/session/' style='font-size:2em'>Session</a>
+      </li><li>
+        <a href='/conference-notes/tags/sre/' style='font-size:1em'>Sre</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button><div class='header-widgets'>
+        <div class='container'><style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><span>Home</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><h1 class='site-title title'>Ken&#39;s Conference Notes</h1><p class='desc site-desc'>Minimalist theme for Hugo</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><div class='copyright'>
+  <p></p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__public_path__='\/conference-notes\/assets\/js\/'</script>
+
+<script src='/conference-notes/assets/js/main.fae8ed32.js'></script>
+
+</body>
+
 </html>
+

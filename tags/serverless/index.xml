@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Serverless on Ken&#39;s Conference Notes</title>
+    <link>/conference-notes/tags/serverless/</link>
+    <description>Recent content in Serverless on Ken&#39;s Conference Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/conference-notes/tags/serverless/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Accelerate Innovation &amp; Maximize Business Value with Serverless Apps [SRV212]</title>
+      <link>/conference-notes/aws_reinvent_2018/comcast/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/conference-notes/aws_reinvent_2018/comcast/</guid>
+      <description>pluses * streamlined devops, codepipeline * supports a lot of languages * tag direct costs to projects
+considerations: * know what specialties are * certain languages not supported * need to deal with cold starts, concurrent read/writes, etc. * migration from non-aws requires focus and commitment
+ kinesis firehose to watch for inbound connections faster than humans could do, and then try to shut down (ex. using &amp;ldquo;i am not a robot&amp;rdquo;)</description>
+    </item>
+    
+  </channel>
+</rss>

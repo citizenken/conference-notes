@@ -11,18 +11,6 @@
   </url>
   
   <url>
-    <loc>/conference-notes/aws_reinvent_2018/codepipeline/</loc>
-  </url>
-  
-  <url>
-    <loc>/conference-notes/aws_reinvent_2018/coinbase_sre/</loc>
-  </url>
-  
-  <url>
-    <loc>/conference-notes/aws_reinvent_2018/comcast/</loc>
-  </url>
-  
-  <url>
     <loc>/conference-notes/aws_reinvent_2018/multicloud_myth/</loc>
   </url>
   
@@ -39,7 +27,57 @@
   </url>
   
   <url>
+    <loc>/conference-notes/aws_reinvent_2018/comcast/</loc>
+  </url>
+  
+  <url>
+    <loc>/conference-notes/aws_reinvent_2018/advanced_cd_best_practices/</loc>
+  </url>
+  
+  <url>
+    <loc>/conference-notes/aws_reinvent_2018/safe_serverless_deployments/</loc>
+  </url>
+  
+  <url>
+    <loc>/conference-notes/aws_reinvent_2018/coinbase_sre/</loc>
+  </url>
+  
+  <url>
     <loc>/conference-notes/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/conference-notes/tags/cd/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/conference-notes/tags/codepipeline/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/conference-notes/tags/culture/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/conference-notes/tags/customer-story/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/conference-notes/tags/devops/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/conference-notes/aws_reinvent_2018/amazon_devops/</loc>
+  </url>
+  
+  <url>
+    <loc>/conference-notes/page/</loc>
     <priority>0</priority>
   </url>
   
@@ -48,16 +86,31 @@
   </url>
   
   <url>
-    <loc>/conference-notes/aws_reinvent_2018/amazon_devops/</loc>
+    <loc>/conference-notes/page/search/</loc>
   </url>
   
   <url>
-    <loc>/conference-notes/aws_reinvent_2018/safe_serverless_deployments/</loc>
+    <loc>/conference-notes/tags/serverless/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/conference-notes/tags/session/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/conference-notes/tags/sre/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/conference-notes/tags/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/conference-notes/aws_reinvent_2018/real_time_operations/</loc>
   </url>
   
 </urlset>
